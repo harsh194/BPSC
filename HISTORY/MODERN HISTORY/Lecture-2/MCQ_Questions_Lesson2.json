@@ -1,0 +1,898 @@
+{
+  "lesson": "Modern History - Lecture 02",
+  "topic": "Later Mughals and Provincial Kingdom - 02",
+  "source": "Daily Class Notes (English) - Lecture 02",
+  "total_questions": 80,
+  "questions": [
+    {
+      "id": 1,
+      "question": "At what age did Bahadur Shah I become emperor in 1707?",
+      "options": {
+        "A": "63 years",
+        "B": "65 years",
+        "C": "67 years",
+        "D": "70 years"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "question": "What was the real name of Bahadur Shah I?",
+      "options": {
+        "A": "Prince Muazzam",
+        "B": "Prince Azam",
+        "C": "Prince Kambaksh",
+        "D": "Azim-us-Shan"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 3,
+      "question": "The 10th Sikh Guru who supported Bahadur Shah in the War of Succession was:",
+      "options": {
+        "A": "Guru Tegh Bahadur",
+        "B": "Guru Gobind Singh",
+        "C": "Guru Nanak",
+        "D": "Guru Arjan"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "question": "What mansab did Bahadur Shah confer on Guru Gobind Singh?",
+      "options": {
+        "A": "3,000",
+        "B": "4,000",
+        "C": "5,000",
+        "D": "7,000"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 5,
+      "question": "After Guru Gobind Singh's death in 1708, who took leadership of the Sikhs?",
+      "options": {
+        "A": "Guru Tegh Bahadur",
+        "B": "Banda Bahadur",
+        "C": "Guru Har Krishan",
+        "D": "Bhai Mani Singh"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "question": "In which year was Banda Bahadur defeated by Mughal forces at Lohgarh Fort?",
+      "options": {
+        "A": "1710",
+        "B": "1711",
+        "C": "1712",
+        "D": "1713"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "question": "Lohgarh Fort, where Banda Bahadur was defeated, is located in:",
+      "options": {
+        "A": "Punjab",
+        "B": "Haryana",
+        "C": "Rajasthan",
+        "D": "Uttar Pradesh"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 8,
+      "question": "Shahu, who was released from Mughal captivity in 1707, was the:",
+      "options": {
+        "A": "Son of Shivaji",
+        "B": "Son of Sambhaji, grandson of Shivaji",
+        "C": "Brother of Shivaji",
+        "D": "Son of Rajaram"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "question": "Shahu's claim to Maratha leadership was against:",
+      "options": {
+        "A": "Sambhaji",
+        "B": "Rajaram",
+        "C": "Tarabai",
+        "D": "Balaji Vishwanath"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 10,
+      "question": "What percentage of land revenue was Sardeshmukhi under Bahadur Shah I?",
+      "options": {
+        "A": "5%",
+        "B": "10%",
+        "C": "15%",
+        "D": "25%"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 11,
+      "question": "The Mansabdari system was originally introduced by:",
+      "options": {
+        "A": "Babur",
+        "B": "Humayun",
+        "C": "Akbar",
+        "D": "Jahangir"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 12,
+      "question": "Which of the following factions weakened central Mughal control during Bahadur Shah's reign?",
+      "options": {
+        "A": "Turanis, Iranis, Hindustanis",
+        "B": "Rajputs, Deccanis",
+        "C": "Both A and B",
+        "D": "None of the above"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 13,
+      "question": "What percentage of land revenue was Chauth collected by the Marathas?",
+      "options": {
+        "A": "10%",
+        "B": "20%",
+        "C": "25%",
+        "D": "30%"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 14,
+      "question": "In which year did a Dutch delegation visit Bahadur Shah's court?",
+      "options": {
+        "A": "1710",
+        "B": "1711",
+        "C": "1712",
+        "D": "1713"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "question": "The Dutch delegation to Bahadur Shah's court was led by:",
+      "options": {
+        "A": "Joshua Katlay",
+        "B": "Jan Pieterson",
+        "C": "Willem van Houten",
+        "D": "Pieter van den Broecke"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 16,
+      "question": "Juliana, who welcomed the Dutch delegation, was also known as:",
+      "options": {
+        "A": "Bibi Juliana",
+        "B": "Juliana Firangi",
+        "C": "Both A and B",
+        "D": "Neither A nor B"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 17,
+      "question": "Historian Sir Sydney Owen remarked about Bahadur Shah I that he was:",
+      "options": {
+        "A": "The greatest Mughal emperor",
+        "B": "The last Mughal emperor about whom some good words can be said",
+        "C": "A weak and incompetent ruler",
+        "D": "The founder of Mughal decline"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "question": "What was the real name of Jahandar Shah?",
+      "options": {
+        "A": "Prince Muazzam",
+        "B": "Azim-us-Shan",
+        "C": "Prince Azam",
+        "D": "Muhammad Akbar"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 19,
+      "question": "Jahandar Shah ascended the throne in 1712 after killing his brothers in the battle of:",
+      "options": {
+        "A": "Rabi-ul-Awwal",
+        "B": "Rabi-ul-Akhar",
+        "C": "Jamadi-ul-Awwal",
+        "D": "Rajab"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "question": "For how long did Jahandar Shah rule the Mughal Empire?",
+      "options": {
+        "A": "Six months",
+        "B": "One year",
+        "C": "Two years",
+        "D": "Three years"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 21,
+      "question": "The dancing girl who exercised significant power over Jahandar Shah was:",
+      "options": {
+        "A": "Lal Kunwar",
+        "B": "Bibi Juliana",
+        "C": "Mumtaz Mahal",
+        "D": "Nur Jahan"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 22,
+      "question": "Who was the Wazir (Prime Minister) during Jahandar Shah's reign?",
+      "options": {
+        "A": "Chin Qilich Khan",
+        "B": "Zulfiqar Khan",
+        "C": "Abdullah Khan",
+        "D": "Hussain Ali Khan"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "question": "Zulfiqar Khan belonged to which faction?",
+      "options": {
+        "A": "Turani Faction",
+        "B": "Irani Faction",
+        "C": "Hindustani Faction",
+        "D": "Rajput Faction"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "question": "Chin Qilich Khan, who later became Nizam-ul-Mulk, belonged to which faction?",
+      "options": {
+        "A": "Turani Faction",
+        "B": "Irani Faction",
+        "C": "Hindustani Faction",
+        "D": "Deccani Faction"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 25,
+      "question": "The Syed Brothers, Abdullah Khan and Hussain Ali Khan, belonged to which faction?",
+      "options": {
+        "A": "Turani Faction",
+        "B": "Irani Faction",
+        "C": "Hindustani Faction",
+        "D": "Rajput Faction"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 26,
+      "question": "In which year was Jahandar Shah defeated in the Battle of Agra?",
+      "options": {
+        "A": "1712",
+        "B": "1713",
+        "C": "1714",
+        "D": "1715"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 27,
+      "question": "Who defeated Jahandar Shah in the Battle of Agra?",
+      "options": {
+        "A": "Bahadur Shah I",
+        "B": "Farrukhsiyar with support of Syed Brothers",
+        "C": "Muhammad Shah",
+        "D": "Ahmad Shah"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 28,
+      "question": "In which year did Jahandar Shah abolish the Jizya tax?",
+      "options": {
+        "A": "1712",
+        "B": "1713",
+        "C": "1714",
+        "D": "1715"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "question": "Jizya tax was imposed on:",
+      "options": {
+        "A": "All citizens",
+        "B": "Only Muslims",
+        "C": "Non-Muslims",
+        "D": "Only traders"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 30,
+      "question": "The Ijara system introduced by Jahandar Shah involved:",
+      "options": {
+        "A": "Direct tax collection by government",
+        "B": "Land revenue collection through public auction",
+        "C": "Hereditary tax collection",
+        "D": "Religious tax collection"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 31,
+      "question": "Jai Singh II of Amber was appointed as Subedar of:",
+      "options": {
+        "A": "Gujarat",
+        "B": "Malwa",
+        "C": "Bengal",
+        "D": "Deccan"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "question": "What title was conferred on Jai Singh II of Amber by Jahandar Shah?",
+      "options": {
+        "A": "Maharaja",
+        "B": "Mirza Raja",
+        "C": "Raja",
+        "D": "Sawai"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 33,
+      "question": "Ajit Singh of Marwar was appointed as Subedar of:",
+      "options": {
+        "A": "Malwa",
+        "B": "Gujarat",
+        "C": "Bengal",
+        "D": "Punjab"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 34,
+      "question": "What title was conferred on Ajit Singh of Marwar by Jahandar Shah?",
+      "options": {
+        "A": "Mirza Raja",
+        "B": "Maharaja",
+        "C": "Raja",
+        "D": "Sawai"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 35,
+      "question": "According to Jahandar Shah's arrangement with Marathas, who was authorized to collect Chauth and Sardeshmukhi in the Deccan?",
+      "options": {
+        "A": "Maratha agents only",
+        "B": "Mughal officials only",
+        "C": "Both Mughal and Maratha agents",
+        "D": "Local chieftains"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 36,
+      "question": "The Syed Brothers were known as:",
+      "options": {
+        "A": "King Slayers",
+        "B": "King Makers",
+        "C": "King Breakers",
+        "D": "King Defenders"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 37,
+      "question": "Sardeshmukhi was considered by Marathas as:",
+      "options": {
+        "A": "A forced tax",
+        "B": "A voluntary acknowledgment of Maratha sovereignty",
+        "C": "A tribute to Mughals",
+        "D": "A religious tax"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 38,
+      "question": "Sardeshmukhi was paid by local chieftains to the:",
+      "options": {
+        "A": "Mughal Emperor",
+        "B": "Peshwa",
+        "C": "Chhatrapati (Maratha king)",
+        "D": "Local governors"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 39,
+      "question": "Guru Gobind Singh died in which year?",
+      "options": {
+        "A": "1707",
+        "B": "1708",
+        "C": "1709",
+        "D": "1710"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 40,
+      "question": "The main reasons for recurring Mughal-Maratha conflicts during Bahadur Shah's reign were:",
+      "options": {
+        "A": "Religious differences",
+        "B": "Chauth and Sardeshmukhi",
+        "C": "Territorial disputes",
+        "D": "Trade conflicts"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 41,
+      "question": "Under the Mansabdari system during later Mughals, which problem emerged regarding Jagirs?",
+      "options": {
+        "A": "Jagirs were too large",
+        "B": "Jagirs were insufficient to support growing number of mansabdars",
+        "C": "Jagirs were only given to Muslims",
+        "D": "Jagirs were hereditary"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 42,
+      "question": "Ghaziuddin, who had the title I'timad-ul-Mulk, belonged to which faction?",
+      "options": {
+        "A": "Turani Faction",
+        "B": "Irani Faction",
+        "C": "Hindustani Faction",
+        "D": "Rajput Faction"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 43,
+      "question": "What was the nature of Bahadur Shah I's policy towards Sikhs and Rajputs?",
+      "options": {
+        "A": "Aggressive",
+        "B": "Conciliatory (mild)",
+        "C": "Neutral",
+        "D": "Hostile"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 44,
+      "question": "Jahandar Shah's reign is significant for marking the beginning of:",
+      "options": {
+        "A": "Mughal expansion",
+        "B": "Open factional politics among Mughal nobles",
+        "C": "Religious tolerance",
+        "D": "Economic prosperity"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 45,
+      "question": "Under the Ijara system, land revenue was assigned to:",
+      "options": {
+        "A": "Government officials",
+        "B": "Highest bidder (contractor)",
+        "C": "Local zamindars",
+        "D": "Religious institutions"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 46,
+      "question": "What was the consequence of the Ijara system on peasants?",
+      "options": {
+        "A": "Reduced taxation",
+        "B": "Better protection",
+        "C": "Exploitation, as revenue farmers sought maximum profit",
+        "D": "Increased prosperity"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 47,
+      "question": "Contemporary people referred to Jahandar Shah as:",
+      "options": {
+        "A": "A great emperor",
+        "B": "A wise ruler",
+        "C": "A licentious and incapable monarch",
+        "D": "A religious leader"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 48,
+      "question": "The abolition of Jizya tax by Jahandar Shah was aimed at:",
+      "options": {
+        "A": "Increasing revenue",
+        "B": "Gaining support of non-Muslims",
+        "C": "Pleasing the nobility",
+        "D": "Following Islamic law"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 49,
+      "question": "Banda Bahadur launched a major revolt against:",
+      "options": {
+        "A": "Rajputs",
+        "B": "Marathas",
+        "C": "Mughals",
+        "D": "Afghans"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 50,
+      "question": "Who personally campaigned against Banda Bahadur?",
+      "options": {
+        "A": "Aurangzeb",
+        "B": "Bahadur Shah I",
+        "C": "Jahandar Shah",
+        "D": "Farrukhsiyar"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 51,
+      "question": "The release of Shahu from Mughal captivity paved the way for his claim against:",
+      "options": {
+        "A": "Mughal authority",
+        "B": "Tarabai for Maratha leadership",
+        "C": "British rule",
+        "D": "Portuguese control"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 52,
+      "question": "Which historian made a famous remark about Bahadur Shah I at his death?",
+      "options": {
+        "A": "Sir Sydney Owen",
+        "B": "Khafi Khan",
+        "C": "Vincent Smith",
+        "D": "James Mill"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 53,
+      "question": "The conciliatory policies of Bahadur Shah I provided:",
+      "options": {
+        "A": "Permanent peace",
+        "B": "Temporary peace but failed to contain rise of regional powers",
+        "C": "Complete Mughal control",
+        "D": "Economic prosperity"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 54,
+      "question": "Jahandar Shah was described as excessively influenced by:",
+      "options": {
+        "A": "His ministers",
+        "B": "His mistress Lal Kunwar",
+        "C": "Foreign ambassadors",
+        "D": "Religious leaders"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 55,
+      "question": "The rising dominance of powerful nobles like the Syed Brothers showed:",
+      "options": {
+        "A": "Strengthening of Mughal authority",
+        "B": "Declining authority of the Mughal emperor",
+        "C": "Effective administration",
+        "D": "Religious harmony"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 56,
+      "question": "Chauth was collected by Marathas as:",
+      "options": {
+        "A": "A voluntary payment",
+        "B": "A tax collected forcefully",
+        "C": "A tribute to Mughal emperor",
+        "D": "A religious offering"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 57,
+      "question": "The Mansabdari system under later Mughals was weakened by:",
+      "options": {
+        "A": "Foreign invasions only",
+        "B": "Corruption, inefficiency, and factional divisions",
+        "C": "Religious conflicts only",
+        "D": "Natural disasters"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 58,
+      "question": "Bahadur Shah I tried to revive Mughal authority after:",
+      "options": {
+        "A": "Akbar's death",
+        "B": "Shah Jahan's reign",
+        "C": "Aurangzeb's long wars",
+        "D": "Humayun's exile"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 59,
+      "question": "The Dutch delegation's visit to Bahadur Shah's court in 1711 indicates:",
+      "options": {
+        "A": "Mughal isolation",
+        "B": "Continuing foreign interest in Mughal empire",
+        "C": "Dutch conquest plans",
+        "D": "Religious conversion efforts"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 60,
+      "question": "Juliana (Bibi Juliana) was a:",
+      "options": {
+        "A": "Dutch lady",
+        "B": "Portuguese lady at the Mughal court",
+        "C": "French ambassador",
+        "D": "English trader"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 61,
+      "question": "The main pillar of Mughal military-administrative setup was:",
+      "options": {
+        "A": "Jagirdari system",
+        "B": "Mansabdari system",
+        "C": "Zamindari system",
+        "D": "Ijara system"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 62,
+      "question": "Bahadur Shah I's short reign showed:",
+      "options": {
+        "A": "Revival of Mughal power",
+        "B": "The decline of imperial control",
+        "C": "Successful military campaigns",
+        "D": "Economic growth"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 63,
+      "question": "Jahandar Shah's concession to Marathas allowing them to collect taxes:",
+      "options": {
+        "A": "Strengthened Mughal authority",
+        "B": "Further eroded imperial authority",
+        "C": "Brought permanent peace",
+        "D": "Increased revenue"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 64,
+      "question": "The factional politics during Jahandar Shah's reign involved how many main factions?",
+      "options": {
+        "A": "Two",
+        "B": "Three",
+        "C": "Four",
+        "D": "Five"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 65,
+      "question": "Jai Singh II belonged to which Rajput state?",
+      "options": {
+        "A": "Marwar (Jodhpur)",
+        "B": "Amber (Jaipur)",
+        "C": "Mewar",
+        "D": "Bikaner"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 66,
+      "question": "Ajit Singh belonged to which Rajput state?",
+      "options": {
+        "A": "Amber (Jaipur)",
+        "B": "Marwar (Jodhpur)",
+        "C": "Mewar",
+        "D": "Bikaner"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 67,
+      "question": "The Ijara system showed:",
+      "options": {
+        "A": "Administrative efficiency",
+        "B": "Financial weakness and decline in administrative efficiency",
+        "C": "Military strength",
+        "D": "Religious tolerance"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 68,
+      "question": "Jahandar Shah's abolition of Jizya marked a departure from the policies of:",
+      "options": {
+        "A": "Akbar",
+        "B": "Shah Jahan",
+        "C": "Aurangzeb",
+        "D": "Jahangir"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 69,
+      "question": "The arrangement regarding Maratha taxes reflected:",
+      "options": {
+        "A": "Growing power of Marathas and weakening Mughal hold in Deccan",
+        "B": "Complete Mughal control over Marathas",
+        "C": "Maratha submission to Mughals",
+        "D": "End of Maratha power"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 70,
+      "question": "Bahadur Shah I failed to fully resolve hostilities with:",
+      "options": {
+        "A": "Sikhs",
+        "B": "Marathas", 
+        "C": "Rajputs",
+        "D": "All of the above"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 71,
+      "question": "The condition imposed by Jahandar Shah on Maratha tax collection was that:",
+      "options": {
+        "A": "Only Maratha agents could collect",
+        "B": "Only Mughal officials were authorized to collect",
+        "C": "Both could collect equally",
+        "D": "Local zamindars would collect"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 72,
+      "question": "Jahandar Shah's indulgent lifestyle made him unpopular among:",
+      "options": {
+        "A": "Only nobles",
+        "B": "Only subjects",
+        "C": "Nobles and subjects",
+        "D": "Only religious leaders"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 73,
+      "question": "The defeat of Banda Bahadur demonstrated:",
+      "options": {
+        "A": "Complete Mughal control over Sikhs",
+        "B": "Bahadur Shah's personal military involvement",
+        "C": "End of Sikh resistance",
+        "D": "Sikh submission to Mughals"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 74,
+      "question": "The Syed Brothers' ability to enthrone and dethrone emperors earned them the title:",
+      "options": {
+        "A": "Emperor Makers",
+        "B": "King Makers",
+        "C": "Power Brokers",
+        "D": "Throne Guardians"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 75,
+      "question": "Revenue farmers under the Ijara system sought:",
+      "options": {
+        "A": "Peasant welfare",
+        "B": "Maximum profit",
+        "C": "Religious merit",
+        "D": "Imperial favor"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 76,
+      "question": "The fratricidal conflict that brought Jahandar Shah to power occurred in:",
+      "options": {
+        "A": "1711",
+        "B": "1712",
+        "C": "1713",
+        "D": "1714"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 77,
+      "question": "Bahadur Shah I's conciliatory approach towards regional powers was aimed at:",
+      "options": {
+        "A": "Complete surrender",
+        "B": "Balancing diverse interests",
+        "C": "Military conquest",
+        "D": "Religious conversion"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 78,
+      "question": "The growing corruption and inefficiency in the Mansabdari system occurred during:",
+      "options": {
+        "A": "Early Mughal period",
+        "B": "Akbar's reign only",
+        "C": "Later Mughals including Bahadur Shah",
+        "D": "Pre-Mughal period"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 79,
+      "question": "Under Mughal supervision, the collection of Chauth and Sardeshmukhi by Marathas showed:",
+      "options": {
+        "A": "Complete Mughal authority",
+        "B": "Compromise between Mughal authority and Maratha power",
+        "C": "Maratha defeat",
+        "D": "End of taxation system"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 80,
+      "question": "The reigns of Bahadur Shah I and Jahandar Shah demonstrated that:",
+      "options": {
+        "A": "Mughal power was reviving",
+        "B": "The Mughal emperor had ceased to be the real center of power",
+        "C": "Regional powers were weakening",
+        "D": "Administrative efficiency was improving"
+      },
+      "correct_answer": "B"
+    }
+  ],
+  "answer_key": {
+    "1": "B", "2": "A", "3": "B", "4": "C", "5": "B", "6": "B", "7": "B", "8": "B", "9": "C", "10": "B",
+    "11": "C", "12": "C", "13": "C", "14": "B", "15": "A", "16": "C", "17": "B", "18": "B", "19": "B", "20": "B",
+    "21": "A", "22": "B", "23": "B", "24": "A", "25": "C", "26": "B", "27": "B", "28": "B", "29": "C", "30": "B",
+    "31": "B", "32": "B", "33": "B", "34": "B", "35": "B", "36": "B", "37": "B", "38": "C", "39": "B", "40": "B",
+    "41": "B", "42": "A", "43": "B", "44": "B", "45": "B", "46": "C", "47": "C", "48": "B", "49": "C", "50": "B",
+    "51": "B", "52": "A", "53": "B", "54": "B", "55": "B", "56": "B", "57": "B", "58": "C", "59": "B", "60": "B",
+    "61": "B", "62": "B", "63": "B", "64": "B", "65": "B", "66": "B", "67": "B", "68": "C", "69": "A", "70": "C",
+    "71": "B", "72": "C", "73": "B", "74": "B", "75": "B", "76": "B", "77": "B", "78": "C", "79": "B", "80": "B"
+  }
+}
