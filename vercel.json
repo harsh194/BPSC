@@ -1,0 +1,12 @@
+{
+  "routes": [
+    { "src": "/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "/HISTORY/(.*)", "dest": "/HISTORY/$1" },
+    { "src": "/favicon.ico", "dest": "/favicon.ico" },
+    { "src": "/manifest.webmanifest", "dest": "/manifest.webmanifest" },
+    { "src": "/sw.js", "dest": "/sw.js" },
+    { "src": "/workbox-(.*)\\.js", "dest": "/workbox-$1.js" },
+    { "src": "/registerSW.js", "dest": "/registerSW.js" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}

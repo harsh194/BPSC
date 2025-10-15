@@ -10,15 +10,26 @@ class MCQService {
         return this.cache.get(filePath)
       }
 
-      // For now, we'll return mock data for Lecture 1
-      // In a real implementation, this would fetch the actual JSON file
+      // Attempt to fetch the JSON from the app root (spaces encoded)
+      const url = '/' + filePath.replace(/^\/?/, '')
+      const resp = await fetch(encodeURI(url))
+      if (resp.ok) {
+        const data = await resp.json()
+        // normalize keys if needed
+        if (!data.questions && Array.isArray(data.Questions)) {
+          data.questions = data.Questions
+        }
+        this.cache.set(filePath, data)
+        return data
+      }
+
+      // Fallback: Lecture 1 mock data if path matches
       if (filePath.includes('Lesson1') || filePath.includes('Lecture-1')) {
         const mockData = await this.getMockLecture1Data()
         this.cache.set(filePath, mockData)
         return mockData
       }
 
-      // Return null for other lectures that don't have MCQ data yet
       return null
     } catch (error) {
       console.error('Error loading MCQ data:', error)

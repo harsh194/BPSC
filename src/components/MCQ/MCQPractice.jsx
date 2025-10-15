@@ -7,7 +7,7 @@ import QuizInterface from './QuizInterface'
 import QuizResults from './QuizResults'
 
 function MCQPractice() {
-  const { state } = useBPSC()
+  const { state, startQuiz } = useBPSC()
   const { subjects, currentQuiz } = state
   
   const [availableMCQs, setAvailableMCQs] = useState([])
@@ -45,7 +45,6 @@ function MCQPractice() {
 
       if (quiz) {
         // Start the quiz using context
-        const { startQuiz } = useBPSC()
         startQuiz(quiz)
       }
     } catch (error) {

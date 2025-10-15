@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './styles/index.css'
 import { BPSCProvider } from './context/BPSCContext.jsx'
+import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BPSCProvider>
-      <App />
-    </BPSCProvider>
+    <BrowserRouter>
+      <BPSCProvider>
+        <App />
+      </BPSCProvider>
+    </BrowserRouter>
   </React.StrictMode>,
 )

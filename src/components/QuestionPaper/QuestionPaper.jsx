@@ -25,6 +25,9 @@ function QuestionPaper() {
   })
   const [generatedPaper, setGeneratedPaper] = useState(null)
   const [showPreview, setShowPreview] = useState(false)
+  const [answers, setAnswers] = useState({})
+  const [submitted, setSubmitted] = useState(false)
+  const [paperResult, setPaperResult] = useState(null)
   const [generating, setGenerating] = useState(false)
 
   useEffect(() => {
@@ -75,10 +78,17 @@ function QuestionPaper() {
         .map(mcq => mcqService.loadMCQData(mcq.filePath))
 
       const mcqDataSources = await Promise.all(mcqDataPromises)
-      const validSources = mcqDataSources.filter(data => data !== null)
+      const validSources = mcqDataSources.filter(data => data && Array.isArray(data.questions) && data.questions.length > 0)
 
       if (validSources.length === 0) {
         alert('Failed to load question data')
+        return
+      }
+
+      // Ensure requested questions do not exceed actually loaded pool
+      const actualAvailable = validSources.reduce((sum, src) => sum + (src.questions?.length || 0), 0)
+      if (paperSettings.totalQuestions > actualAvailable) {
+        alert(`Only ${actualAvailable} questions could be loaded from selected sources. Please reduce the question count or select more sources.`)
         return
       }
 
@@ -93,6 +103,9 @@ function QuestionPaper() {
 
       if (paper) {
         setGeneratedPaper(paper)
+        setAnswers({})
+        setSubmitted(false)
+        setPaperResult(null)
         setShowPreview(true)
       } else {
         alert('Failed to generate question paper')
@@ -132,6 +145,28 @@ function QuestionPaper() {
     printWindow.print()
   }
 
+  const handleSelectAnswer = (qNum, optionKey) => {
+    if (submitted) return
+    setAnswers(prev => ({ ...prev, [qNum]: optionKey }))
+  }
+
+  const handleSubmitAnswers = () => {
+    if (!generatedPaper) return
+    const total = generatedPaper.totalQuestions
+    let correct = 0
+    const details = generatedPaper.questions.map(q => {
+      const qNum = q.paperQuestionNumber
+      const userAns = answers[qNum]
+      const correctAns = q.correct_answer
+      const isCorrect = userAns === correctAns
+      if (isCorrect) correct++
+      return { qNum, userAns, correctAns, isCorrect }
+    })
+    const percentage = Math.round((correct / total) * 100)
+    setPaperResult({ total, correct, percentage, details })
+    setSubmitted(true)
+  }
+
   if (showPreview && generatedPaper) {
     return (
       <div className="container py-8">
@@ -148,20 +183,23 @@ function QuestionPaper() {
               >
                 Back to Generator
               </button>
-              <button
-                onClick={handleDownloadPaper}
-                className="btn btn-secondary"
-              >
-                <Download className="w-4 h-4 mr-2" />
-                Download HTML
-              </button>
-              <button
-                onClick={handlePrintPaper}
-                className="btn btn-primary"
-              >
-                <FileText className="w-4 h-4 mr-2" />
-                Print Paper
-              </button>
+              {!submitted && (
+                <button onClick={handleSubmitAnswers} className="btn btn-primary">
+                  Submit Answers
+                </button>
+              )}
+              {submitted && (
+                <>
+                  <button onClick={handleDownloadPaper} className="btn btn-secondary">
+                    <Download className="w-4 h-4 mr-2" />
+                    Download HTML
+                  </button>
+                  <button onClick={handlePrintPaper} className="btn btn-primary">
+                    <FileText className="w-4 h-4 mr-2" />
+                    Print Paper
+                  </button>
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -183,6 +221,17 @@ function QuestionPaper() {
               </div>
             </div>
           </div>
+
+          {/* Result Summary (after submit) */}
+          {submitted && paperResult && (
+            <div className="mb-6">
+              <h3 className="font-semibold text-secondary-800 mb-2">Result</h3>
+              <div className="flex items-center space-x-6 text-secondary-700">
+                <div>Score: {paperResult.correct} / {paperResult.total}</div>
+                <div>Percentage: {paperResult.percentage}%</div>
+              </div>
+            </div>
+          )}
 
           {/* Instructions */}
           <div className="mb-6">
@@ -206,23 +255,39 @@ function QuestionPaper() {
                 <div className="flex-1">
                   <p className="text-secondary-800 mb-4">{question.question}</p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {Object.entries(question.options).map(([key, value]) => (
-                      <div key={key} className="flex items-start space-x-2">
-                        <span className="font-medium text-secondary-700 min-w-[1.5rem]">
-                          ({key})
+                    {(['A','B','C','D']).map((optKey) => (
+                      <label key={optKey} className="flex items-start space-x-2 cursor-pointer">
+                        <input
+                          type="radio"
+                          name={`q-${question.paperQuestionNumber}`}
+                          className="mt-1"
+                          disabled={submitted}
+                          checked={answers[question.paperQuestionNumber] === optKey}
+                          onChange={() => handleSelectAnswer(question.paperQuestionNumber, optKey)}
+                        />
+                        <span className="font-medium text-secondary-700 min-w-[1.5rem]">({optKey})</span>
+                        <span className={`text-secondary-700 ${submitted && question.correct_answer === optKey ? 'font-semibold' : ''}`}>
+                          {question.options[optKey]}
                         </span>
-                        <span className="text-secondary-700">{value}</span>
-                      </div>
+                        {submitted && answers[question.paperQuestionNumber] === optKey && (
+                          <span className={`ml-2 ${optKey === question.correct_answer ? 'text-green-600' : 'text-red-600'}`}>
+                            {optKey === question.correct_answer ? 'Correct' : 'Your choice'}
+                          </span>
+                        )}
+                      </label>
                     ))}
                   </div>
+                  {submitted && answers[question.paperQuestionNumber] && answers[question.paperQuestionNumber] !== question.correct_answer && (
+                    <div className="mt-2 text-sm text-green-700">Correct Answer: {question.correct_answer}</div>
+                  )}
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Answer Key */}
-        {generatedPaper.answerKey && (
+        {/* Answer Key (after submit) */}
+        {submitted && generatedPaper.answerKey && (
           <div className="card mt-8 bg-secondary-25 print-page-break">
             <h3 className="text-xl font-semibold text-secondary-800 mb-4">Answer Key</h3>
             <div className="grid grid-cols-10 gap-4">

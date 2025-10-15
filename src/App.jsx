@@ -1,33 +1,18 @@
 import React from 'react'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import { useBPSC } from './context/BPSCContext'
 import Layout from './components/Layout/Layout'
 import Home from './components/Home/Home'
 import Subjects from './components/Subjects/Subjects'
 import MCQPractice from './components/MCQ/MCQPractice'
+import NotesViewer from './components/Subjects/NotesViewer'
 import QuestionPaper from './components/QuestionPaper/QuestionPaper'
 import Progress from './components/Progress/Progress'
 import LoadingSpinner from './components/UI/LoadingSpinner'
 
 function App() {
   const { state } = useBPSC()
-  const { activeTab, loading } = state
-
-  const renderActiveTab = () => {
-    switch (activeTab) {
-      case 'home':
-        return <Home />
-      case 'subjects':
-        return <Subjects />
-      case 'mcq':
-        return <MCQPractice />
-      case 'question-papers':
-        return <QuestionPaper />
-      case 'progress':
-        return <Progress />
-      default:
-        return <Home />
-    }
-  }
+  const { loading } = state
 
   if (loading) {
     return (
@@ -40,7 +25,16 @@ function App() {
   return (
     <Layout>
       <main className="flex-1 overflow-auto">
-        {renderActiveTab()}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/subjects" element={<Subjects />} />
+          <Route path="/study-materials" element={<Subjects />} />
+          <Route path="/notes" element={<NotesViewer />} />
+          <Route path="/mcq-practice" element={<MCQPractice />} />
+          <Route path="/question-paper" element={<QuestionPaper />} />
+          <Route path="/progress" element={<Progress />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
       </main>
     </Layout>
   )

@@ -1,9 +1,11 @@
 import React from 'react'
 import { BookOpen, Brain, FileText, TrendingUp, ArrowRight, Play } from 'lucide-react'
 import { useBPSC } from '../../context/BPSCContext'
+import { useNavigate } from 'react-router-dom'
 
 function Home() {
   const { state, setActiveTab } = useBPSC()
+  const navigate = useNavigate()
   const { subjects, progress } = state
 
   const stats = [
@@ -38,28 +40,28 @@ function Home() {
       title: 'Start MCQ Practice',
       description: 'Begin practicing with available question sets',
       icon: Brain,
-      action: () => setActiveTab('mcq'),
+      action: () => { setActiveTab('mcq'); navigate('/mcq-practice') },
       color: 'bg-gradient-to-r from-blue-500 to-blue-600'
     },
     {
       title: 'Browse Subjects',
       description: 'Explore available study materials',
       icon: BookOpen,
-      action: () => setActiveTab('subjects'),
+      action: () => { setActiveTab('subjects'); navigate('/subjects') },
       color: 'bg-gradient-to-r from-green-500 to-green-600'
     },
     {
       title: 'Generate Question Paper',
       description: 'Create custom practice papers',
       icon: FileText,
-      action: () => setActiveTab('question-papers'),
+      action: () => { setActiveTab('question-papers'); navigate('/question-paper') },
       color: 'bg-gradient-to-r from-purple-500 to-purple-600'
     },
     {
       title: 'View Progress',
       description: 'Track your study progress and performance',
       icon: TrendingUp,
-      action: () => setActiveTab('progress'),
+      action: () => { setActiveTab('progress'); navigate('/progress') },
       color: 'bg-gradient-to-r from-orange-500 to-orange-600'
     }
   ]
@@ -224,7 +226,7 @@ function Home() {
 
             <div className="mt-6 pt-4 border-t border-secondary-200">
               <button 
-                onClick={() => setActiveTab('subjects')}
+                onClick={() => { setActiveTab('subjects'); navigate('/subjects') }}
                 className="btn btn-primary w-full"
               >
                 <Play className="w-4 h-4 mr-2" />

@@ -10,6 +10,7 @@ import {
   CheckCircle2
 } from 'lucide-react'
 import { useBPSC } from '../../context/BPSCContext'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { clsx } from 'clsx'
 
 const navigationItems = [
@@ -21,11 +22,23 @@ const navigationItems = [
 ]
 
 function Sidebar() {
-  const { state, setActiveTab, setCurrentSubject, setCurrentTopic, setSidebarOpen } = useBPSC()
+  const { state, setActiveTab, setCurrentSubject, setCurrentTopic, setSidebarOpen, setCurrentLecture } = useBPSC()
   const { activeTab, sidebarOpen, subjects, currentSubject, currentTopic } = state
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  const routeMap = {
+    home: '/',
+    subjects: '/subjects',
+    mcq: '/mcq-practice',
+    'question-papers': '/question-paper',
+    progress: '/progress'
+  }
 
   const handleTabClick = (tabId) => {
     setActiveTab(tabId)
+    const path = routeMap[tabId] || '/'
+    navigate(path)
     setSidebarOpen(false) // Close sidebar on mobile after selection
   }
 
@@ -49,7 +62,7 @@ function Sidebar() {
         <nav className="space-y-2">
           {navigationItems.map((item) => {
             const Icon = item.icon
-            const isActive = activeTab === item.id
+            const isActive = location.pathname === (routeMap[item.id] || '/')
             
             return (
               <button
@@ -130,9 +143,20 @@ function Sidebar() {
                         {currentTopic === topicName && (
                           <div className="bg-secondary-50 border-t border-secondary-200">
                             {Object.entries(topic.lectures).map(([lectureName, lecture]) => (
-                              <div 
+                              <button 
                                 key={lectureName}
-                                className="flex items-center space-x-3 p-3 pl-12 border-b border-secondary-100 last:border-b-0"
+                                onClick={() => {
+                                  // Prefer lecture.path from scanner; else construct
+                                  const path = lecture.path || `HISTORY/${topicName}/Lecture-${lecture.number}`
+                                  setCurrentSubject(subjectName)
+                                  setCurrentTopic(topicName)
+                                  // Set selected lecture before navigating so /notes has context
+                                  setCurrentLecture({ ...lecture, subjectName, topicName, path })
+                                  setSidebarOpen(false)
+                                  setActiveTab('notes')
+                                  navigate('/notes')
+                                }}
+                                className="w-full text-left flex items-center space-x-3 p-3 pl-12 border-b border-secondary-100 last:border-b-0 hover:bg-secondary-100 transition-colors"
                               >
                                 {lecture.status === 'complete' ? (
                                   <CheckCircle2 className="w-4 h-4 text-green-500" />
@@ -154,7 +178,7 @@ function Sidebar() {
                                     </p>
                                   )}
                                 </div>
-                              </div>
+                              </button>
                             ))}
                           </div>
                         )}

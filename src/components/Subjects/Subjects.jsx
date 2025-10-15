@@ -1,9 +1,11 @@
 import React from 'react'
 import { BookOpen, FileText, Brain, Clock, CheckCircle2, Circle, AlertCircle } from 'lucide-react'
 import { useBPSC } from '../../context/BPSCContext'
+import { useNavigate } from 'react-router-dom'
 
 function Subjects() {
-  const { state, setActiveTab } = useBPSC()
+  const { state, setActiveTab, setCurrentLecture } = useBPSC()
+  const navigate = useNavigate()
   const { subjects } = state
 
   const getStatusIcon = (status) => {
@@ -31,6 +33,15 @@ function Subjects() {
   const handleStartPractice = (lectureId) => {
     // Navigate to MCQ practice with specific lecture
     setActiveTab('mcq')
+    navigate('/mcq-practice')
+  }
+
+  const handleViewNotes = (subjectName, topicName, lecture) => {
+    // Build relative path to serve files via dev server
+    const path = `HISTORY/${topicName}/Lecture-${lecture.number}`
+    setCurrentLecture({ ...lecture, subjectName, topicName, path })
+    setActiveTab('notes')
+    navigate('/notes')
   }
 
   return (
@@ -122,7 +133,17 @@ function Subjects() {
                     {/* Lectures Grid */}
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                       {Object.entries(topic.lectures).map(([lectureName, lecture]) => (
-                        <div key={lectureName} className="border border-secondary-200 rounded-lg p-4 hover:border-secondary-300 transition-colors">
+                        <div
+                          key={lectureName}
+                          className={`border border-secondary-200 rounded-lg p-4 hover:border-secondary-300 transition-colors ${
+                            (lecture.files.dailyNotes || lecture.files.classNotes) ? 'cursor-pointer' : ''
+                          }`}
+                          onClick={() => {
+                            if (lecture.files.dailyNotes || lecture.files.classNotes) {
+                              handleViewNotes(subjectName, topicName, lecture)
+                            }
+                          }}
+                        >
                           {/* Lecture Header */}
                           <div className="flex items-center justify-between mb-3">
                             <div className="flex items-center space-x-2">
@@ -176,7 +197,7 @@ function Subjects() {
                           <div className="space-y-2">
                             {lecture.files.mcqJson && lecture.mcqCount > 0 && (
                               <button
-                                onClick={() => handleStartPractice(`${subjectName}-${topicName}-${lectureName}`)}
+                                onClick={(e) => { e.stopPropagation(); handleStartPractice(`${subjectName}-${topicName}-${lectureName}`) }}
                                 className="btn btn-primary w-full text-sm py-2"
                               >
                                 <Brain className="w-4 h-4 mr-2" />
@@ -185,7 +206,10 @@ function Subjects() {
                             )}
                             
                             {(lecture.files.dailyNotes || lecture.files.classNotes) && (
-                              <button className="btn btn-outline w-full text-sm py-2">
+                              <button
+                                onClick={(e) => { e.stopPropagation(); handleViewNotes(subjectName, topicName, lecture) }}
+                                className="btn btn-outline w-full text-sm py-2"
+                              >
                                 <FileText className="w-4 h-4 mr-2" />
                                 View Notes
                               </button>
