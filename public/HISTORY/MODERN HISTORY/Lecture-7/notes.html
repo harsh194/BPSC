@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern History - Lecture 7: Dutch, Danish & French Companies</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header h2 {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .section {
+            background: white;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-2px);
+        }
+
+        .section-header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 20px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .section-header:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .section-content {
+            padding: 25px;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, #667eea, #764ba2);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 20px;
+            width: 12px;
+            height: 12px;
+            background: #667eea;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        .settlement-name {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .settlement-date {
+            color: #e74c3c;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .details {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #ffeaa7 0%, #fab1a0 100%);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #2d3436;
+        }
+
+        .important-date {
+            background: #e74c3c;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .battle-section {
+            background: #fff5f5;
+            border: 2px solid #fed7d7;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .battle-title {
+            color: #c53030;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .key-points {
+            background: #f0fff4;
+            border-left: 5px solid #48bb78;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .key-points h4 {
+            color: #2f855a;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .policy-item {
+            background: #e6fffa;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 6px;
+            border-left: 3px solid #38b2ac;
+        }
+
+        .collapsible {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .collapsible.active {
+            max-height: 3000px;
+        }
+
+        .toggle-btn {
+            float: right;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .toggle-btn.active {
+            transform: rotate(180deg);
+        }
+
+        .company-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .company-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .company-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .settlements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .settlement-card {
+            background: linear-gradient(135deg, #fd79a8 0%, #fdcb6e 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        .defeat-section {
+            background: #ffe6e6;
+            border: 2px dashed #ff9999;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .defeat-title {
+            color: #cc0000;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .company-grid, .settlements-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .phase-marker {
+            background: linear-gradient(135deg, #fd79a8 0%, #fdcb6e 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            margin: 10px 0;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏛️ BPSC Modern History</h1>
+            <h2>Lecture 7: Dutch, Danish & French Companies</h2>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('dutch-company-section')">
+                🇳🇱 Dutch East India Company
+                <span class="toggle-btn" id="dutch-company-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="dutch-company-section">
+                <div class="key-points">
+                    <h4>🚢 Early Expeditions</h4>
+                    <p>In <span class="important-date">1595–1596</span>, the first Dutch fleet, led by <span class="highlight">Cornelis de Houtman</span>, sailed east</p>
+                    <p>This fleet came towards the spice islands of Indonesia, not directly to India. In 1596, Houtman traveled to <span class="highlight">Sumatra and Bantam</span></p>
+                    <p><strong>Main Purpose:</strong> To reach the spice islands of Indonesia, not directly to India</p>
+                </div>
+
+                <div class="key-points">
+                    <h4>🏢 Company Formation</h4>
+                    <p>The <span class="highlight">United East India Company of the Netherlands (Dutch East India Company)</span> was founded in <span class="important-date">1602</span></p>
+                    <p><strong>Original Name:</strong> <span class="highlight">Verenigde Oostindische Compagnie (VOC)</span></p>
+                    <p><strong>Established by:</strong> States-General of the Netherlands</p>
+                    <p><strong>Monopoly:</strong> Granted a <span class="highlight">21-year trading monopoly</span> in Asia</p>
+                    <p><strong>Historical Significance:</strong> Considered the world's <span class="highlight">first multinational corporation</span> and the <span class="highlight">first company to issue stock</span></p>
+                </div>
+
+                <div class="key-points">
+                    <h4>🎯 Key Features</h4>
+                    <div class="policy-item">
+                        <strong>Capital Structure:</strong> Dutch companies worked on the basis of <span class="highlight">joint capital</span>
+                    </div>
+                    <div class="policy-item">
+                        <strong>Authority:</strong> The company made all treaties in the name of the <span class="highlight">Dutch government</span>
+                    </div>
+                    <div class="policy-item">
+                        <strong>Trade Focus:</strong> Initially took interest in the <span class="highlight">spice trade</span> and then in the <span class="highlight">cloth trade</span>
+                    </div>
+                    <div class="policy-item">
+                        <strong>Jakarta Conquest:</strong> In <span class="important-date">1619</span> the Dutch conquered Jakarta and established a city called <span class="highlight">Batavia</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('dutch-settlements-section')">
+                🏘️ Dutch Settlements in India
+                <span class="toggle-btn" id="dutch-settlements-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="dutch-settlements-section">
+                <div class="key-points">
+                    <h4>📍 First Settlement</h4>
+                    <p>The Dutch East India Company was founded in 1602, but their <span class="highlight">first factory in India</span> was established in <span class="important-date">1605</span> at <span class="highlight">Masulipatnam</span> (present-day Andhra Pradesh)</p>
+                </div>
+
+                <div class="settlements-grid">
+                    <div class="settlement-card">
+                        <div class="settlement-name">🏭 Masulipatnam (Machilipatnam)</div>
+                        <div>📅 Established: 1605</div>
+                        <div>🎯 First Dutch settlement in India</div>
+                    </div>
+
+                    <div class="settlement-card">
+                        <div class="settlement-name">🏘️ Pulicat</div>
+                        <div>📅 Established: 1610</div>
+                        <div>🎯 Important coastal trading post</div>
+                    </div>
+
+                    <div class="settlement-card">
+                        <div class="settlement-name">🏪 Surat</div>
+                        <div>📅 Established: 1616</div>
+                        <div>🎯 Major commercial center</div>
+                    </div>
+
+                    <div class="settlement-card">
+                        <div class="settlement-name">🏛️ Pipli</div>
+                        <div>📅 Established: 1627</div>
+                        <div>🎯 First Dutch factory in Bengal</div>
+                    </div>
+
+                    <div class="settlement-card">
+                        <div class="settlement-name">⚓ Bimlipatam</div>
+                        <div>📅 Established: 1641</div>
+                        <div>🎯 Strategic port location</div>
+                    </div>
+
+                    <div class="settlement-card">
+                        <div class="settlement-name">🏰 Chinsurah</div>
+                        <div>📅 Established: 1653</div>
+                        <div>🎯 Powerful Dutch trade center with Fort Gustavul</div>
+                    </div>
+
+                    <div class="settlement-card">
+                        <div class="settlement-name">🌴 Cochin</div>
+                        <div>📅 Established: 1663</div>
+                        <div>🎯 Taken from Portuguese</div>
+                    </div>
+                </div>
+
+                <div class="key-points">
+                    <h4>🏛️ Headquarters Shift</h4>
+                    <p>In <span class="important-date">1690</span>, the Dutch shifted their headquarters from <span class="highlight">Pulicat to Nagapattinam</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('dutch-trade-section')">
+                💰 Dutch Trade in India
+                <span class="toggle-btn" id="dutch-trade-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="dutch-trade-section">
+                <div class="policy-item">
+                    <strong>Trade Goods:</strong> The Dutch traded <span class="highlight">cotton, indigo, silk, rice and opium</span> with India
+                </div>
+                <div class="policy-item">
+                    <strong>Export Focus:</strong> The Dutch exported heavily from the <span class="highlight">Coromandel coast</span>
+                </div>
+                <div class="policy-item">
+                    <strong>Major Export Item:</strong> The Dutch made <span class="highlight">Indian cloth</span> a major export item
+                </div>
+                <div class="policy-item">
+                    <strong>Currency Innovation:</strong> The Dutch introduced their gold-made <span class="highlight">"Pagoda" coin</span> in Pulicat
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('dutch-competition-section')">
+                ⚔️ Dutch Competition and Decline
+                <span class="toggle-btn" id="dutch-competition-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="dutch-competition-section">
+                <div class="key-points">
+                    <h4>🏆 Victory over Portuguese</h4>
+                    <p>The Dutch virtually expelled the Portuguese from maritime trade in India</p>
+                    <p>However, they could not stand before the naval power of the British</p>
+                </div>
+
+                <div class="battle-section">
+                    <div class="battle-title">⚔️ Battle of Bedara (Battle of Chinsura) - 1759</div>
+                    <div class="details">
+                        <p><strong>📅 Date:</strong> <span class="important-date">25 November 1759</span></p>
+                        <p><strong>📍 Location:</strong> Bengal</p>
+                        <p><strong>⚔️ Combatants:</strong> British vs Dutch forces</p>
+                        <p><strong>🤝 Dutch Alliance:</strong> Dutch worked with <span class="highlight">Nawab Mir Jafar</span> to oust the British</p>
+                        <p><strong>🏆 Result:</strong> British defeated the Dutch decisively</p>
+                        <p><strong>📉 Impact:</strong> After this war, Dutch influence in India diminished and they moved to Indonesia</p>
+                    </div>
+                </div>
+
+                <div class="defeat-section">
+                    <div class="defeat-title">📉 Final Decline of Dutch Power</div>
+                    <div class="policy-item">
+                        <strong>1795:</strong> British invaded the Dutch Republic following the French Revolution and began taking over Dutch colonies
+                    </div>
+                    <div class="policy-item">
+                        <strong>1795:</strong> British took over Dutch settlements on the Malabar coast (not the final departure)
+                    </div>
+                    <div class="policy-item">
+                        <strong>1824–25:</strong> British annexed the last of the Dutch trading centres to the English East India Company
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('danish-company-section')">
+                🇩🇰 Danish East India Company
+                <span class="toggle-btn" id="danish-company-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="danish-company-section">
+                <div class="key-points">
+                    <h4>📅 Arrival and Establishments</h4>
+                    <p>The Danish East India Company came to India in <span class="important-date">1616</span></p>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="settlement-name">🏰 Tranquebar (Tamil Nadu)</div>
+                        <div class="settlement-date">1620</div>
+                        <div class="details">
+                            First Danish factory established. They built a fort called <span class="highlight">Fort Dansborg</span> in Tranquebar
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="settlement-name">🏛️ Serampore (Bengal)</div>
+                        <div class="settlement-date">1676</div>
+                        <div class="details">
+                            Second factory built. <span class="highlight">Serampore was the headquarters</span> of the Danes in India
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-points">
+                    <h4>🐛 Silk Production</h4>
+                    <p>In the 17th century, the town of <span class="highlight">Cossimbazar</span>, under the supervision of the Danes, was the <span class="highlight">largest producer of silk thread</span></p>
+                </div>
+
+                <div class="key-points">
+                    <h4>🏃‍♂️ Early Departure</h4>
+                    <p>Initially, the Danes had trading competition with the Portuguese</p>
+                    <p>But they left India in <span class="important-date">1745</span></p>
+                    <p><strong>Distinction:</strong> The Danes were the <span class="highlight">first European company to leave India</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('french-company-section')">
+                🇫🇷 French East India Company
+                <span class="toggle-btn" id="french-company-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="french-company-section">
+                <div class="key-points">
+                    <h4>🏢 Company Establishment</h4>
+                    <p>It was established in <span class="important-date">1664</span></p>
+                    <p>It was the <span class="highlight">last European company to come to India</span></p>
+                    <p>During the time of <span class="highlight">Louis XIV (1643-1715, Bourbon dynasty)</span>, the French East India Company - <span class="highlight">'Compagnie des Indes Orientales'</span> was established with the help of Prime Minister <span class="highlight">Colbert</span></p>
+                    <p><strong>Nature:</strong> It was a <span class="highlight">state controlled company</span></p>
+                </div>
+
+                <div class="key-points">
+                    <h4>🚢 First Expedition</h4>
+                    <p>In <span class="important-date">1667</span> the first French expedition team came to India under the leadership of <span class="highlight">Francis Carro</span></p>
+                </div>
+
+                <div class="phase-marker">Major French Settlements</div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="settlement-name">🏪 Surat</div>
+                        <div class="settlement-date">1668</div>
+                        <div class="details">
+                            <span class="highlight">Francois Caron</span> established the first French factory in Surat
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="settlement-name">🏭 Masulipatnam</div>
+                        <div class="settlement-date">1669</div>
+                        <div class="details">
+                            Second French factory built by <span class="highlight">Marcara</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="settlement-name">🏛️ Chandranagar (Bengal)</div>
+                        <div class="settlement-date">1673</div>
+                        <div class="details">
+                            Acquired from <span class="highlight">Nawab Shaista Khan</span>. In 1690, a fort named <span class="highlight">"Fort Orientales"</span> was built here
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="settlement-name">🏰 Pondicherry</div>
+                        <div class="settlement-date">1674</div>
+                        <div class="details">
+                            Acquired from <span class="highlight">Sultan of Bijapur</span>. Prosperous city established by <span class="highlight">Frank Martin</span>, who was the <span class="highlight">first governor of Pondicherry</span>. Frank Martin had accepted the subordination of <span class="highlight">Shivaji</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="settlement-name">🏝️ Mauritius</div>
+                        <div class="settlement-date">1721</div>
+                        <div class="details">
+                            French colony established
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="settlement-name">🏘️ Yanam</div>
+                        <div class="settlement-date">1723, regained 1731</div>
+                        <div class="details">
+                            Factory established in 1723, vacated in 1727, regained during <span class="highlight">Dupleix's reign</span> in 1731
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="settlement-name">🌴 Mahe</div>
+                        <div class="settlement-date">1725</div>
+                        <div class="details">
+                            French factory established
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="settlement-name">🏛️ Karaikal</div>
+                        <div class="settlement-date">1739</div>
+                        <div class="details">
+                            French colony established
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-points">
+                    <h4>🏛️ Headquarters</h4>
+                    <p>The headquarters of the French was initially <span class="highlight">Surat</span> which was later shifted to <span class="highlight">Pondicherry</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('french-objectives-section')">
+                🎯 French Objectives and Dupleix Era
+                <span class="toggle-btn" id="french-objectives-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="french-objectives-section">
+                <div class="key-points">
+                    <h4>💰 Initial Commercial Objectives (1664-1741)</h4>
+                    <p>The main objective of the French to come to India was <span class="highlight">trade and commerce</span></p>
+                    <p>From their arrival in India till 1741, the main objective of the French, like the British, was completely commercial</p>
+                </div>
+
+                <div class="key-points">
+                    <h4>👑 Political Transformation under Dupleix (1741-1754)</h4>
+                    <p>In <span class="important-date">1741</span>, <span class="highlight">Joseph Francois Dupleix</span> was made the governor of the French East India Company</p>
+                    <p>During his time, the <span class="highlight">political objectives</span> of the company became clearly visible and were given more importance than commercial objectives</p>
+                    <p>Dupleix was highly intelligent who took advantage of the mutual enmity of the local kings</p>
+                    <p>On the strength of his cleverness and diplomacy, he achieved a respected place in the Indian political scenario</p>
+                </div>
+
+                <div class="key-points">
+                    <h4>⚔️ Military Achievements</h4>
+                    <p>Dupleix's army, under the leadership of <span class="highlight">Marquis de Bussy</span>, captured the area between <span class="highlight">Hyderabad and Cape Comorin</span></p>
+                </div>
+
+                <div class="key-points">
+                    <h4>🏴󠁧󠁢󠁥󠁮󠁧󠁿 British Challenge</h4>
+                    <p>In <span class="important-date">1744</span>, British officer <span class="highlight">Robert Clive</span> came to India who later defeated Dupleix</p>
+                    <p>After this defeat, Dupleix was called back to France in <span class="important-date">1754</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('french-decline-section')">
+                📉 Battle of Wandiwash and French Decline
+                <span class="toggle-btn" id="french-decline-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="french-decline-section">
+                <div class="battle-section">
+                    <div class="battle-title">⚔️ Battle of Wandiwash</div>
+                    <div class="details">
+                        <p><strong>📅 Date:</strong> <span class="important-date">22 January 1760</span></p>
+                        <p><strong>⚔️ Context:</strong> Part of the Third Carnatic War</p>
+                        <p><strong>🇫🇷 French Commander:</strong> <span class="highlight">Comte de Lally</span></p>
+                        <p><strong>🇬🇧 British Commander:</strong> <span class="highlight">Sir Eyre Coote</span></p>
+                        <p><strong>🏆 Result:</strong> British defeated the French decisively</p>
+                        <p><strong>📈 Impact:</strong> Helped in establishing British dominance in India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            const toggle = document.getElementById(sectionId.replace('-section', '-toggle'));
+            
+            section.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+
+        // Auto-expand all sections by default
+        document.addEventListener('DOMContentLoaded', function() {
+            const allSections = document.querySelectorAll('.collapsible');
+            const allToggles = document.querySelectorAll('.toggle-btn');
+            
+            allSections.forEach(section => section.classList.add('active'));
+            allToggles.forEach(toggle => toggle.classList.add('active'));
+        });
+    </script>
+</body>
+</html>

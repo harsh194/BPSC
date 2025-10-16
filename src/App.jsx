@@ -6,6 +6,7 @@ import Home from './components/Home/Home'
 import Subjects from './components/Subjects/Subjects'
 import MCQPractice from './components/MCQ/MCQPractice'
 import NotesViewer from './components/Subjects/NotesViewer'
+import StudyNotes from './components/Notes/StudyNotes'
 import QuestionPaper from './components/QuestionPaper/QuestionPaper'
 import Progress from './components/Progress/Progress'
 import LoadingSpinner from './components/UI/LoadingSpinner'
@@ -30,6 +31,7 @@ function App() {
           <Route path="/subjects" element={<Subjects />} />
           <Route path="/study-materials" element={<Subjects />} />
           <Route path="/notes" element={<NotesViewer />} />
+          <Route path="/study-notes" element={<StudyNotes />} />
           <Route path="/mcq-practice" element={<MCQPractice />} />
           <Route path="/question-paper" element={<QuestionPaper />} />
           <Route path="/progress" element={<Progress />} />

@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern History - Lecture 2: Later Mughals - Bahadur Shah I & Jahandar Shah</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header h2 {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .section {
+            background: white;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-2px);
+        }
+
+        .section-header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 20px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .section-header:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .section-content {
+            padding: 25px;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, #667eea, #764ba2);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 20px;
+            width: 12px;
+            height: 12px;
+            background: #667eea;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        .emperor-name {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .reign-period {
+            color: #e74c3c;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .details {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #ffeaa7 0%, #fab1a0 100%);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #2d3436;
+        }
+
+        .important-date {
+            background: #e74c3c;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .battle-section {
+            background: #fff5f5;
+            border: 2px solid #fed7d7;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .battle-title {
+            color: #c53030;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .key-points {
+            background: #f0fff4;
+            border-left: 5px solid #48bb78;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .key-points h4 {
+            color: #2f855a;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .policy-item {
+            background: #e6fffa;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 6px;
+            border-left: 3px solid #38b2ac;
+        }
+
+        .tax-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .tax-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .tax-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .collapsible {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .collapsible.active {
+            max-height: 2000px;
+        }
+
+        .toggle-btn {
+            float: right;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .toggle-btn.active {
+            transform: rotate(180deg);
+        }
+
+        .faction-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .faction-card {
+            background: linear-gradient(135deg, #fd79a8 0%, #fdcb6e 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        .faction-name {
+            font-weight: bold;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .tax-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .phase-marker {
+            background: linear-gradient(135deg, #fd79a8 0%, #fdcb6e 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            margin: 10px 0;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .rajput-appointments {
+            background: #fff8e1;
+            border: 2px solid #ffcc02;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .appointment-title {
+            color: #ff8f00;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏛️ BPSC Modern History</h1>
+            <h2>Lecture 2: Later Mughals - Bahadur Shah I & Jahandar Shah</h2>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('bahadur-shah-section')">
+                👑 Bahadur Shah I (1707–1712 CE)
+                <span class="toggle-btn" id="bahadur-shah-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="bahadur-shah-section">
+                <div class="key-points">
+                    <h4>📛 Names and Titles</h4>
+                    <p><strong>Real Name:</strong> <span class="highlight">Prince Muazzam</span></p>
+                    <p><strong>Regnal Title:</strong> <span class="highlight">Shah Alam I</span></p>
+                    <p><strong>Popular Nickname:</strong> <span class="highlight">Shah-e-Bekhabar</span> (by Khafi Khan, the Mughal historian)</p>
+                    <p><strong>Accession:</strong> Became emperor in <span class="important-date">1707</span> at the age of <span class="highlight">65</span></p>
+                </div>
+
+                <div class="key-points">
+                    <h4>🎯 Key Policies</h4>
+                    <div class="policy-item">
+                        <strong>General Approach:</strong> Adopted a conciliatory (mild) policy towards the Sikhs and Rajputs
+                    </div>
+                    <div class="policy-item">
+                        <strong>Goal:</strong> Tried to revive Mughal authority after Aurangzeb's long wars
+                    </div>
+                    <div class="policy-item">
+                        <strong>Result:</strong> Short reign (1707–1712) showed the decline of imperial control
+                    </div>
+                </div>
+
+                <div class="key-points">
+                    <h4>📜 Historical Assessment</h4>
+                    <p><strong>Death:</strong> <span class="important-date">1712 CE</span></p>
+                    <p><strong>Sir Sydney Owen's Remark:</strong> <em>"He was the last Mughal emperor about whom some good words can be said."</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('sikh-relations-section')">
+                🗡️ Relations with Sikhs
+                <span class="toggle-btn" id="sikh-relations-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="sikh-relations-section">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="emperor-name">👥 Guru Gobind Singh Support</div>
+                        <div class="details">
+                            <p>The 10th Sikh Guru, <span class="highlight">Guru Gobind Singh</span>, supported Bahadur Shah in the War of Succession</p>
+                            <p>In return, Bahadur Shah conferred on Guru Gobind Singh a <span class="highlight">mansab of 5,000</span></p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="emperor-name">💀 Guru's Death & Banda Bahadur's Rise</div>
+                        <div class="reign-period">1708</div>
+                        <div class="details">
+                            <p>After Guru Gobind Singh's death in <span class="important-date">1708</span>, his disciple <span class="highlight">Banda Bahadur</span> took leadership of the Sikhs</p>
+                            <p>Banda Bahadur launched a major revolt against the Mughals</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="emperor-name">⚔️ Defeat at Lohgarh Fort</div>
+                        <div class="reign-period">1711</div>
+                        <div class="details">
+                            <p>Bahadur Shah personally campaigned against Banda Bahadur</p>
+                            <p>In <span class="important-date">1711</span>, Banda Bahadur was defeated by Mughal forces at <span class="highlight">Lohgarh Fort (Haryana)</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('maratha-relations-section')">
+                🏰 Relations with Marathas
+                <span class="toggle-btn" id="maratha-relations-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="maratha-relations-section">
+                <div class="key-points">
+                    <h4>🔓 Release of Shahu</h4>
+                    <p>Released <span class="highlight">Shahu</span> (son of Sambhaji, grandson of Shivaji) from Mughal captivity in <span class="important-date">1707</span></p>
+                    <p>This release paved the way for Shahu's claim to Maratha leadership against <span class="highlight">Tarabai</span></p>
+                </div>
+
+                <div class="tax-grid">
+                    <div class="tax-card">
+                        <div class="tax-name">💰 Chauth</div>
+                        <div>📊 Rate: 25% of land revenue</div>
+                        <div>📝 Nature: Collected forcefully by Marathas</div>
+                        <div>⚠️ Impact: Caused conflict between Mughals and Marathas</div>
+                    </div>
+
+                    <div class="tax-card">
+                        <div class="tax-name">💎 Sardeshmukhi</div>
+                        <div>📊 Rate: 10% of land revenue</div>
+                        <div>📝 Nature: Additional tax levied by Marathas</div>
+                        <div>👑 Purpose: Paid to Chhatrapati (Maratha king)</div>
+                        <div>✅ Status: Granted by Bahadur Shah</div>
+                    </div>
+                </div>
+
+                <div class="key-points">
+                    <h4>🎯 Significance</h4>
+                    <p>Together, <span class="highlight">Chauth and Sardeshmukhi</span> became the main reasons for recurring Mughal–Maratha conflicts during Bahadur Shah's reign</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('mansabdari-section')">
+                🏛️ Mansabdari System Under Bahadur Shah
+                <span class="toggle-btn" id="mansabdari-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="mansabdari-section">
+                <div class="key-points">
+                    <h4>📚 System Background</h4>
+                    <p>The <span class="highlight">Mansabdari system</span>, introduced by Akbar, continued as the main pillar of the Mughal military-administrative setup</p>
+                </div>
+
+                <div class="key-points">
+                    <h4>📉 Signs of Decline</h4>
+                    <div class="policy-item">
+                        <strong>Jagir Crisis:</strong> Jagirs (revenue assignments) were insufficient to support the growing number of mansabdars
+                    </div>
+                    <div class="policy-item">
+                        <strong>Administrative Issues:</strong> Corruption and inefficiency increased
+                    </div>
+                    <div class="policy-item">
+                        <strong>Political Divisions:</strong> The Mughal nobility was divided into factions (Turanis, Iranis, Hindustanis, Rajputs, Deccanis), weakening central control
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('foreign-relations-section')">
+                🌍 Foreign Relations
+                <span class="toggle-btn" id="foreign-relations-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="foreign-relations-section">
+                <div class="key-points">
+                    <h4>🇳🇱 Dutch Delegation (1711)</h4>
+                    <p>In <span class="important-date">1711</span>, a Dutch delegation visited Bahadur Shah's court</p>
+                    <p>The mission was led by <span class="highlight">Joshua Katlay</span></p>
+                    <p>They were welcomed by <span class="highlight">Juliana</span> (Bibi Juliana, a Portuguese lady at the Mughal court, also known as Juliana Firangi)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('jahandar-shah-section')">
+                👑 Jahandar Shah (1712–1713 CE)
+                <span class="toggle-btn" id="jahandar-shah-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="jahandar-shah-section">
+                <div class="key-points">
+                    <h4>📛 Basic Information</h4>
+                    <p><strong>Real Name:</strong> <span class="highlight">Azim-us-Shan</span></p>
+                    <p><strong>Ascension:</strong> Ascended the Mughal throne in <span class="important-date">1712 CE</span> after killing his brothers in the <span class="highlight">Battle of Rabi-ul-Akhar</span></p>
+                    <p><strong>Reign Duration:</strong> Only one year (1712–1713)</p>
+                </div>
+
+                <div class="key-points">
+                    <h4>👨‍💼 Nature of Rule</h4>
+                    <div class="policy-item">
+                        <strong>Character:</strong> Weak, pleasure-loving, and incompetent ruler
+                    </div>
+                    <div class="policy-item">
+                        <strong>Influence:</strong> Excessively influenced by his mistress, the dancing girl <span class="highlight">Lal Kunwar</span>
+                    </div>
+                    <div class="policy-item">
+                        <strong>Impact:</strong> His indulgent lifestyle made him unpopular among nobles and subjects
+                    </div>
+                    <div class="policy-item">
+                        <strong>Contemporary View:</strong> Referred to as a licentious and incapable monarch
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('factional-politics-section')">
+                ⚔️ Factional Politics & Administration
+                <span class="toggle-btn" id="factional-politics-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="factional-politics-section">
+                <div class="key-points">
+                    <h4>👨‍💼 Wazir (Prime Minister)</h4>
+                    <p><span class="highlight">Zulfiqar Khan</span> (Irani group)</p>
+                </div>
+
+                <div class="faction-grid">
+                    <div class="faction-card">
+                        <div class="faction-name">🏔️ Turani Faction</div>
+                        <div>• Chin Qilich Khan (later Nizam-ul-Mulk)</div>
+                        <div>• Ghaziuddin (I'timad-ul-Mulk)</div>
+                    </div>
+
+                    <div class="faction-card">
+                        <div class="faction-name">🇮🇷 Irani Faction</div>
+                        <div>• Zulfiqar Khan</div>
+                    </div>
+
+                    <div class="faction-card">
+                        <div class="faction-name">🇮🇳 Hindustani Faction</div>
+                        <div>• Syed Brothers</div>
+                        <div>• Abdullah Khan</div>
+                        <div>• Hussain Ali Khan</div>
+                    </div>
+                </div>
+
+                <div class="key-points">
+                    <h4>📈 Political Significance</h4>
+                    <p>Jahandar Shah's reign marks the beginning of open factional politics among Mughal nobles (Turani, Irani, Hindustani)</p>
+                    <p>His rule showed the declining authority of the Mughal emperor and the rising dominance of powerful nobles like the <span class="highlight">Syed Brothers</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('jahandar-policies-section')">
+                📜 Jahandar Shah's Key Policies
+                <span class="toggle-btn" id="jahandar-policies-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="jahandar-policies-section">
+                <div class="key-points">
+                    <h4>🕌 Abolition of Jizya Tax (1713 CE)</h4>
+                    <p>Jahandar Shah abolished the <span class="highlight">Jizya tax</span> in <span class="important-date">1713</span></p>
+                    <p><strong>Jizya Tax:</strong> A religious tax imposed on non-Muslims during Mughal rule</p>
+                    <p><strong>Purpose:</strong> Aimed at gaining the support of non-Muslims and softening Mughal religious policy</p>
+                    <p><strong>Significance:</strong> Marked a departure from the orthodox policies of Aurangzeb</p>
+                </div>
+
+                <div class="key-points">
+                    <h4>💰 Introduction of Ijara System</h4>
+                    <p>Jahandar Shah promoted the <span class="highlight">Ijaredari (Ijara) system</span> in land revenue administration</p>
+                    <p><strong>System:</strong> Land revenue was collected through public auction (bidding) and assigned to the highest bidder (contractor)</p>
+                    <p><strong>Impact:</strong> Often led to exploitation of peasants, as revenue farmers sought maximum profit</p>
+                    <p><strong>Significance:</strong> Showed financial weakness and decline in administrative efficiency</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('rajput-relations-section')">
+                🏰 Relations with Rajputs
+                <span class="toggle-btn" id="rajput-relations-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="rajput-relations-section">
+                <div class="key-points">
+                    <h4>🤝 General Policy</h4>
+                    <p>Jahandar Shah maintained friendly relations with Rajput rulers to strengthen his political position</p>
+                    <p>His conciliatory policy with Rajputs aimed at restoring old Mughal–Rajput alliances</p>
+                </div>
+
+                <div class="rajput-appointments">
+                    <div class="appointment-title">👑 Major Appointments</div>
+                    <div class="policy-item">
+                        <strong>Jai Singh II of Amber (Jaipur):</strong>
+                        <br>• Appointed as <span class="highlight">Subedar of Malwa</span>
+                        <br>• Honoured with the title <span class="highlight">Mirza Raja</span>
+                    </div>
+                    <div class="policy-item">
+                        <strong>Ajit Singh of Marwar (Jodhpur):</strong>
+                        <br>• Appointed as <span class="highlight">Subedar (Governor) of Gujarat</span>
+                        <br>• Honoured with the title <span class="highlight">Maharaja</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('maratha-policy-section')">
+                🏰 Relations with Marathas
+                <span class="toggle-btn" id="maratha-policy-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="maratha-policy-section">
+                <div class="key-points">
+                    <h4>✅ Recognition of Maratha Claims</h4>
+                    <p>Jahandar Shah recognized the Maratha claims over:</p>
+                    <div class="policy-item">
+                        <strong>Chauth:</strong> ¼ of the land revenue, collected forcefully
+                    </div>
+                    <div class="policy-item">
+                        <strong>Sardeshmukhi:</strong> 10% of the land revenue, claimed as a hereditary right of the Maratha king
+                    </div>
+                </div>
+
+                <div class="key-points">
+                    <h4>📋 Conditions Imposed</h4>
+                    <p>Only <span class="highlight">Mughal officials</span> were authorized to collect these taxes in the Deccan, not Maratha agents</p>
+                    <p>This arrangement reflected the growing power of the Marathas and the weakening Mughal hold in the Deccan</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('downfall-section')">
+                💀 Downfall of Jahandar Shah
+                <span class="toggle-btn" id="downfall-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="downfall-section">
+                <div class="battle-section">
+                    <div class="battle-title">⚔️ Battle of Agra (1713)</div>
+                    <div class="details">
+                        <p>In <span class="important-date">1713 CE</span>, <span class="highlight">Farrukhsiyar</span>, with the support of the <span class="highlight">Syed Brothers</span>, defeated Jahandar Shah in the Battle of Agra</p>
+                        <p>Jahandar Shah was captured and executed</p>
+                    </div>
+                </div>
+
+                <div class="key-points">
+                    <h4>👑 Rise of "King Makers"</h4>
+                    <p>The <span class="highlight">Syed Brothers</span> played a decisive role in Mughal politics and are remembered as <span class="highlight">"King Makers"</span> for their ability to enthrone and dethrone emperors</p>
+                    <p>Their victory marked the rise of powerful nobles as the real power behind the Mughal throne</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            const toggle = document.getElementById(sectionId.replace('-section', '-toggle'));
+            
+            section.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+
+        // Auto-expand all sections by default
+        document.addEventListener('DOMContentLoaded', function() {
+            const allSections = document.querySelectorAll('.collapsible');
+            const allToggles = document.querySelectorAll('.toggle-btn');
+            
+            allSections.forEach(section => section.classList.add('active'));
+            allToggles.forEach(toggle => toggle.classList.add('active'));
+        });
+    </script>
+</body>
+</html>

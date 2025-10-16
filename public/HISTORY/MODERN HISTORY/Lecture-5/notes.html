@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern History - Lecture 5: European Companies - Timeline and Impact</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header h2 {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .section {
+            background: white;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-2px);
+        }
+
+        .section-header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 20px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .section-header:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .section-content {
+            padding: 25px;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, #667eea, #764ba2);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 20px;
+            width: 12px;
+            height: 12px;
+            background: #667eea;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        .company-name {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .arrival-date {
+            color: #e74c3c;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .details {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #ffeaa7 0%, #fab1a0 100%);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #2d3436;
+        }
+
+        .important-date {
+            background: #e74c3c;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .key-points {
+            background: #f0fff4;
+            border-left: 5px solid #48bb78;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .key-points h4 {
+            color: #2f855a;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .policy-item {
+            background: #e6fffa;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 6px;
+            border-left: 3px solid #38b2ac;
+        }
+
+        .collapsible {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .collapsible.active {
+            max-height: 3000px;
+        }
+
+        .toggle-btn {
+            float: right;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .toggle-btn.active {
+            transform: rotate(180deg);
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .impact-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .impact-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .war-section {
+            background: #fff5f5;
+            border: 2px solid #fed7d7;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .war-title {
+            color: #c53030;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .discovery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .discovery-card {
+            background: linear-gradient(135deg, #fd79a8 0%, #fdcb6e 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        .discovery-name {
+            font-weight: bold;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .impact-grid, .discovery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .phase-marker {
+            background: linear-gradient(135deg, #fd79a8 0%, #fdcb6e 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            margin: 10px 0;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .portuguese-section {
+            background: #e8f5e8;
+            border: 2px solid #66cc66;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .portuguese-title {
+            color: #339933;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏛️ BPSC Modern History</h1>
+            <h2>Lecture 5: European Companies - Timeline and Impact</h2>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('timeline-section')">
+                📅 Timeline of European Advent in India
+                <span class="toggle-btn" id="timeline-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="timeline-section">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="company-name">🇵🇹 Portuguese</div>
+                        <div class="arrival-date">1498</div>
+                        <div class="details">
+                            Arrival at <span class="highlight">Calicut, Kerala</span> - First Europeans to reach India by sea
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="company-name">🇳🇱 Dutch (Netherlands)</div>
+                        <div class="arrival-date">1602</div>
+                        <div class="details">
+                            Arrival at <span class="highlight">Masulipatam, Andhra Pradesh</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="company-name">🇬🇧 British (English)</div>
+                        <div class="arrival-date">1608</div>
+                        <div class="details">
+                            Established presence in <span class="highlight">Surat, Gujarat</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="company-name">🇩🇰 Danish (Denmark)</div>
+                        <div class="arrival-date">1616</div>
+                        <div class="details">
+                            Settled in <span class="highlight">Tranquebar, Tamil Nadu</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="company-name">🇫🇷 French</div>
+                        <div class="arrival-date">1664</div>
+                        <div class="details">
+                            Established colony in <span class="highlight">Pondicherry</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="company-name">🏴󠁧󠁢󠁥󠁮󠁧󠁿 British Administrative Control</div>
+                        <div class="arrival-date">1757</div>
+                        <div class="details">
+                            After victory at the <span class="highlight">Battle of Plassey</span>, the Nawab of Bengal submitted his dominions to the British East India Company, beginning official British administration
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('impact-section')">
+                🌊 Impact of European Advent in India
+                <span class="toggle-btn" id="impact-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="impact-section">
+                <div class="impact-grid">
+                    <div class="impact-card">
+                        <div class="impact-title">💰 Economic Impact</div>
+                        <div>• Disrupted Indian industries</div>
+                        <div>• Introduced cash crops</div>
+                        <div>• Exploited resources for European benefit</div>
+                        <div>• Led to deindustrialization</div>
+                        <div>• Created dependency on colonial trade</div>
+                    </div>
+
+                    <div class="impact-card">
+                        <div class="impact-title">👑 Political Impact</div>
+                        <div>• Established colonial rule</div>
+                        <div>• Subjugated Indian rulers</div>
+                        <div>• Impacted governance systems</div>
+                        <div>• Paved way for Indian nationalism</div>
+                        <div>• Sparked independence movement</div>
+                    </div>
+
+                    <div class="impact-card">
+                        <div class="impact-title">🏛️ Social and Cultural Impact</div>
+                        <div>• European missionaries introduced Christianity</div>
+                        <div>• Western education system</div>
+                        <div>• Challenged traditional norms</div>
+                        <div>• Growth of Western-educated Indian elite</div>
+                        <div>• Cultural collision and adaptation</div>
+                    </div>
+
+                    <div class="impact-card">
+                        <div class="impact-title">🚂 Infrastructure and Modernization</div>
+                        <div>• Built railways, ports, telegraph networks</div>
+                        <div>• Developed for colonial economic interests</div>
+                        <div>• Focused on serving colonial needs</div>
+                        <div>• Limited benefit to Indian population</div>
+                    </div>
+
+                    <div class="impact-card">
+                        <div class="impact-title">💸 Exploitation and Resource Drain</div>
+                        <div>• Extracted wealth from India</div>
+                        <div>• Exploited resources for European industries</div>
+                        <div>• Led to economic underdevelopment</div>
+                        <div>• Caused poverty in many parts of India</div>
+                    </div>
+
+                    <div class="impact-card">
+                        <div class="impact-title">🚩 Nationalism and Independence Movement</div>
+                        <div>• Fueled sense of nationalism</div>
+                        <div>• Inspired resistance movements</div>
+                        <div>• Advocacy for self-rule</div>
+                        <div>• Gandhi emerged as prominent leader</div>
+                        <div>• Liberation from European domination</div>
+                    </div>
+                </div>
+
+                <div class="key-points">
+                    <h4>🔄 Complex Legacy</h4>
+                    <p>The impact of European advent on India was <span class="highlight">complex and multifaceted</span>. While it brought economic changes, technological advancements, and cultural exchanges, it also led to exploitation, social disruptions, and erosion of traditional systems.</p>
+                    <p>The legacy of European colonization continues to shape India's socio-political landscape and its ongoing efforts to reconcile its colonial past with aspirations for progress and development.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('discoveries-section')">
+                🗺️ Major European Discoveries (15th-18th Century)
+                <span class="toggle-btn" id="discoveries-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="discoveries-section">
+                <div class="discovery-grid">
+                    <div class="discovery-card">
+                        <div class="discovery-name">🇵🇹 Bartolomeu Dias (1487)</div>
+                        <div>Discovered "Cape of Good Hope" (Utmasha Antaripa)</div>
+                    </div>
+
+                    <div class="discovery-card">
+                        <div class="discovery-name">🇪🇸 Christopher Columbus (1492)</div>
+                        <div>Spanish citizen discovered America</div>
+                    </div>
+
+                    <div class="discovery-card">
+                        <div class="discovery-name">🇵🇹 Vasco da Gama (1498)</div>
+                        <div>Portuguese citizen discovered India</div>
+                    </div>
+
+                    <div class="discovery-card">
+                        <div class="discovery-name">🇳🇱 Tasman (1642-1644)</div>
+                        <div>Dutch explorer discovered Tasmania (Van Dieman's Land) and New Zealand</div>
+                    </div>
+
+                    <div class="discovery-card">
+                        <div class="discovery-name">🇬🇧 James Cook (1769-1770)</div>
+                        <div>British sailor discovered Australia</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('hundred-years-war-section')">
+                ⚔️ Hundred Years War (1337–1453 AD)
+                <span class="toggle-btn" id="hundred-years-war-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="hundred-years-war-section">
+                <div class="war-section">
+                    <div class="war-title">🏰 Hundred Years' War Background</div>
+                    <div class="policy-item">
+                        <strong>Duration:</strong> Approximately <span class="highlight">116 years</span> between England and France
+                    </div>
+                    <div class="policy-item">
+                        <strong>Primary Cause:</strong> Dispute over succession to the French throne
+                    </div>
+                    <div class="policy-item">
+                        <strong>Trigger:</strong> After death of King <span class="highlight">Charles IV of France in 1328</span>, Edward III of England claimed the throne through his mother's inheritance
+                    </div>
+                    <div class="policy-item">
+                        <strong>Salic Law:</strong> According to French law, women or their children were not allowed to inherit
+                    </div>
+                    <div class="policy-item">
+                        <strong>French Response:</strong> French nobility installed <span class="highlight">Philip VI</span> as king
+                    </div>
+                    <div class="policy-item">
+                        <strong>Economic Factor:</strong> England's wool trade depended on the French region of <span class="highlight">Flanders</span>
+                    </div>
+                </div>
+
+                <div class="key-points">
+                    <h4>🏆 Results and Consequences</h4>
+                    <div class="policy-item">
+                        <strong>France:</strong> Emerged as a strong nation-state
+                    </div>
+                    <div class="policy-item">
+                        <strong>England:</strong> Became embroiled in internal conflict (the Wars of the Roses)
+                    </div>
+                    <div class="policy-item">
+                        <strong>Feudalism:</strong> Weakened significantly
+                    </div>
+                    <div class="policy-item">
+                        <strong>Military Evolution:</strong> Standing armies and artillery emerged
+                    </div>
+                    <div class="policy-item">
+                        <strong>Historical Impact:</strong> Laid foundations of the modern era in Europe
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('portuguese-arrival-section')">
+                🇵🇹 Portuguese Arrival in India
+                <span class="toggle-btn" id="portuguese-arrival-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="portuguese-arrival-section">
+                <div class="portuguese-section">
+                    <div class="portuguese-title">⛵ Vasco da Gama's Historic Journey</div>
+                    <div class="policy-item">
+                        <strong>First Arrival:</strong> <span class="important-date">20 May 1498</span> in his ship <span class="highlight">Sao Gabriel</span>
+                    </div>
+                    <div class="policy-item">
+                        <strong>Destination:</strong> <span class="highlight">Calicut (now Kozhikode)</span>, by sea route from Lisbon, Portugal
+                    </div>
+                    <div class="policy-item">
+                        <strong>Route:</strong> Sailed through the Atlantic Ocean around Africa
+                    </div>
+                    <div class="policy-item">
+                        <strong>Guide:</strong> Guided by a <span class="highlight">Gujarati pilot named Abdul Majeed</span>
+                    </div>
+                    <div class="policy-item">
+                        <strong>Significance:</strong> This journey marked the <span class="highlight">first direct sea link</span> between Europe and India
+                    </div>
+                    <div class="policy-item">
+                        <strong>Local Ruler:</strong> <span class="highlight">Zamorin</span> was the ruler when Vasco da Gama reached Calicut and welcomed him
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('portuguese-motives-section')">
+                🎯 Why Portuguese Arrived in India
+                <span class="toggle-btn" id="portuguese-motives-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="portuguese-motives-section">
+                <div class="key-points">
+                    <h4>🌶️ Spice Trade</h4>
+                    <p>Spices such as <span class="highlight">pepper, cloves, cardamom, and cinnamon</span> were in great demand in Europe</p>
+                    <p>Previously, this trade was controlled by Arab merchants and the Venetians (Italy)</p>
+                    <p>The Portuguese sought to break the Arab monopoly by finding a direct sea route</p>
+                </div>
+
+                <div class="key-points">
+                    <h4>🛤️ Discovery of Sea Route</h4>
+                    <p>In <span class="important-date">1453</span>, the Turks captured Constantinople, closing the land route from Europe to Asia</p>
+                    <p>Therefore, Portugal attempted to reach India by sea</p>
+                </div>
+
+                <div class="key-points">
+                    <h4>✝️ Religious Purposes</h4>
+                    <p>The Portuguese were inspired by the spirit of the <span class="highlight">"Crusades"</span></p>
+                    <p>They wanted to spread Christianity in India and Asia</p>
+                </div>
+
+                <div class="key-points">
+                    <h4>👑 Political and Imperial Expansion</h4>
+                    <p>Portugal was becoming a maritime power at that time</p>
+                    <p>They wanted to establish their colonial empire by coming to India</p>
+                </div>
+
+                <div class="key-points">
+                    <h4>🏁 Competition with Rival European Powers</h4>
+                    <p><span class="highlight">Spain, the Netherlands, France, and England</span> were also seeking new routes and trading opportunities</p>
+                    <p>Portugal wanted to gain an edge by being the first to reach India</p>
+                </div>
+
+                <div class="key-points">
+                    <h4>💰 Economic Benefits and Trade Monopoly</h4>
+                    <p>The aim was to reach India directly, eliminate the middleman role of Arabs and Italians</p>
+                    <p>Establish monopoly over the spice trade for maximum profits</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            const toggle = document.getElementById(sectionId.replace('-section', '-toggle'));
+            
+            section.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+
+        // Auto-expand all sections by default
+        document.addEventListener('DOMContentLoaded', function() {
+            const allSections = document.querySelectorAll('.collapsible');
+            const allToggles = document.querySelectorAll('.toggle-btn');
+            
+            allSections.forEach(section => section.classList.add('active'));
+            allToggles.forEach(toggle => toggle.classList.add('active'));
+        });
+    </script>
+</body>
+</html>

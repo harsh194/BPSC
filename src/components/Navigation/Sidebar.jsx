@@ -7,7 +7,8 @@ import {
   TrendingUp,
   ChevronRight,
   Circle,
-  CheckCircle2
+  CheckCircle2,
+  BookOpenCheck
 } from 'lucide-react'
 import { useBPSC } from '../../context/BPSCContext'
 import { useNavigate, useLocation } from 'react-router-dom'
@@ -16,6 +17,7 @@ import { clsx } from 'clsx'
 const navigationItems = [
   { id: 'home', label: 'Home', icon: Home },
   { id: 'subjects', label: 'Subjects', icon: BookOpen },
+  { id: 'study-notes', label: 'Study Notes', icon: BookOpenCheck },
   { id: 'mcq', label: 'MCQ Practice', icon: Brain },
   { id: 'question-papers', label: 'Question Papers', icon: FileText },
   { id: 'progress', label: 'Progress', icon: TrendingUp },
@@ -30,6 +32,7 @@ function Sidebar() {
   const routeMap = {
     home: '/',
     subjects: '/subjects',
+    'study-notes': '/study-notes',
     mcq: '/mcq-practice',
     'question-papers': '/question-paper',
     progress: '/progress'

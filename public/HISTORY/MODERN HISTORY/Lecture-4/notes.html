@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern History - Lecture 4: European Companies - Advent and Background</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header h2 {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .section {
+            background: white;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-2px);
+        }
+
+        .section-header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 20px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .section-header:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .section-content {
+            padding: 25px;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, #667eea, #764ba2);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 20px;
+            width: 12px;
+            height: 12px;
+            background: #667eea;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        .event-name {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .event-date {
+            color: #e74c3c;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .details {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #ffeaa7 0%, #fab1a0 100%);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #2d3436;
+        }
+
+        .important-date {
+            background: #e74c3c;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .key-points {
+            background: #f0fff4;
+            border-left: 5px solid #48bb78;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .key-points h4 {
+            color: #2f855a;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .policy-item {
+            background: #e6fffa;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 6px;
+            border-left: 3px solid #38b2ac;
+        }
+
+        .collapsible {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .collapsible.active {
+            max-height: 3000px;
+        }
+
+        .toggle-btn {
+            float: right;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .toggle-btn.active {
+            transform: rotate(180deg);
+        }
+
+        .phase-marker {
+            background: linear-gradient(135deg, #fd79a8 0%, #fdcb6e 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            margin: 10px 0;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .motivations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .motivation-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .motivation-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .crisis-recovery {
+            background: #ffe6e6;
+            border: 2px solid #ff9999;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .crisis-title {
+            color: #cc0000;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .indian-products {
+            background: #fff8dc;
+            border: 2px solid #daa520;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .products-title {
+            color: #b8860b;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .motivations-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏛️ BPSC Modern History</h1>
+            <h2>Lecture 4: European Companies - Advent and Background</h2>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('introduction-section')">
+                🌍 Introduction - The Advent of Europeans in India
+                <span class="toggle-btn" id="introduction-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="introduction-section">
+                <div class="key-points">
+                    <h4>🚢 Beginning of European Era</h4>
+                    <p>The advent of Europeans in India began with <span class="highlight">Vasco da Gama's arrival in 1498</span>, which marked the discovery of a new maritime trade route around Africa to India</p>
+                    <p>This event significantly transformed global trade dynamics and initiated a period of European colonial expansion into the Indian subcontinent</p>
+                </div>
+
+                <div class="motivations-grid">
+                    <div class="motivation-card">
+                        <div class="motivation-title">💰 Economic Motivations (Gold)</div>
+                        <div>• Lucrative trade routes</div>
+                        <div>• Valuable commodities: spices, silk, cotton</div>
+                        <div>• Breaking Arab monopoly in trade</div>
+                    </div>
+
+                    <div class="motivation-card">
+                        <div class="motivation-title">👑 Political Motivations (Glory)</div>
+                        <div>• Establish dominance</div>
+                        <div>• Expand their empires</div>
+                        <div>• Pursuit of imperial glory</div>
+                    </div>
+
+                    <div class="motivation-card">
+                        <div class="motivation-title">✝️ Religious Motivations (God)</div>
+                        <div>• Spread Christianity</div>
+                        <div>• Counter the influence of Islam</div>
+                        <div>• Missionary activities</div>
+                    </div>
+                </div>
+
+                <div class="key-points">
+                    <h4>🎯 The Trinity of Motives</h4>
+                    <p>This convergence of <span class="highlight">"God, Gold, and Glory"</span> laid the foundation for a long period of European involvement and eventual colonization in India</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('europe-15th-century-section')">
+                🏰 Condition of Europe in the 15th Century
+                <span class="toggle-btn" id="europe-15th-century-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="europe-15th-century-section">
+                <div class="key-points">
+                    <h4>🕰️ Period of Transition</h4>
+                    <p>The 15th century in Europe was a period of transition, marking the <span class="highlight">end of the Middle Ages</span> and the <span class="highlight">beginning of the Early Modern Era</span></p>
+                </div>
+
+                <div class="crisis-recovery">
+                    <div class="crisis-title">⚖️ Crisis and Recovery</div>
+                    <div class="policy-item">
+                        <strong>Crisis:</strong> The <span class="highlight">Black Death (plague)</span> - "a creeping death" that caused widespread devastation
+                    </div>
+                    <div class="policy-item">
+                        <strong>Recovery:</strong> Rise of the <span class="highlight">Renaissance</span> and early stirrings of the <span class="highlight">Enlightenment</span>
+                    </div>
+                    <div class="policy-item">
+                        <strong>Renaissance Impact:</strong> Signaled a rebirth in art, science, and human thought
+                    </div>
+                </div>
+
+                <div class="key-points">
+                    <h4>🏛️ Fall of Constantinople (29th May 1453)</h4>
+                    <p>A significant turning point came with the fall of Constantinople on <span class="important-date">29th May 1453</span></p>
+                    <p>This marked the end of the <span class="highlight">Byzantine Empire (Eastern Roman Empire)</span> and the rise of the <span class="highlight">Ottoman Turks</span> as a dominant power</p>
+                    <p><strong>Impact:</strong> Traditional trade routes to Asia were blocked, compelling Europeans to search for new routes to the East</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('socio-economic-section')">
+                📊 Socio-Economic Conditions During the 15th Century
+                <span class="toggle-btn" id="socio-economic-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="socio-economic-section">
+                <div class="policy-item">
+                    <strong>1. Population Recovery:</strong> After the devastation caused by the Black Death (mid-14th century), Europe's population began to recover gradually. Decline in mortality led to the expansion of towns and rural settlements.
+                </div>
+                <div class="policy-item">
+                    <strong>2. Economic Growth:</strong> Revived agriculture, increased trade, and the rise of craft production led to a more vibrant economy.
+                </div>
+                <div class="policy-item">
+                    <strong>3. Rise of the Merchant Class:</strong> A powerful <span class="highlight">bourgeoisie (middle class)</span> began to emerge, especially in urban areas.
+                </div>
+                <div class="policy-item">
+                    <strong>4. Health and Inequality:</strong> Although health standards improved compared to the plague years, epidemics continued to appear sporadically.
+                </div>
+                <div class="policy-item">
+                    <strong>5. Technological Advancements:</strong> Invention and use of navigation tools like the <span class="highlight">magnetic compass, astrolabe</span>, and improvements in <span class="highlight">cartography (map-making)</span> revolutionized sea travel.
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('exploration-section')">
+                🧭 European Exploration (15th–17th Century)
+                <span class="toggle-btn" id="exploration-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="exploration-section">
+                <div class="key-points">
+                    <h4>🎯 Background and Objectives</h4>
+                    <p>Driven by the <span class="highlight">Renaissance spirit of inquiry</span>, economic motives, and religious zeal</p>
+                    <p><strong>Major Objectives:</strong> Finding new trade routes, especially to India and Asia, bypassing Ottoman control</p>
+                </div>
+
+                <div class="key-points">
+                    <h4>⚓ Maritime Advancements</h4>
+                    <div class="policy-item">
+                        <strong>Navigation Tools:</strong> <span class="highlight">Compass, astrolabe</span>, and improved cartography
+                    </div>
+                    <div class="policy-item">
+                        <strong>Ship Development:</strong> Better ships like <span class="highlight">caravels</span> and use of gunpowder for naval dominance
+                    </div>
+                </div>
+
+                <div class="key-points">
+                    <h4>👑 Key European Powers</h4>
+                    <div class="policy-item">
+                        <strong>Portugal:</strong> Led the early phase with explorers like <span class="highlight">Prince Henry the Navigator</span>, Vasco da Gama (reached India in 1498)
+                    </div>
+                    <div class="policy-item">
+                        <strong>Spain:</strong> Sponsored <span class="highlight">Christopher Columbus (1492)</span>, Magellan's circumnavigation
+                    </div>
+                    <div class="policy-item">
+                        <strong>Later Powers:</strong> Dutch, English, and French explorers followed
+                    </div>
+                </div>
+
+                <div class="key-points">
+                    <h4>🏴‍☠️ Formation of Maritime Empires</h4>
+                    <p>European powers established coastal trading posts, colonies, and naval bases</p>
+                    <p>They created global maritime empires, connecting Europe with Asia, Africa, and the Americas</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('india-importance-section')">
+                🇮🇳 Why India was Important to Europe
+                <span class="toggle-btn" id="india-importance-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="india-importance-section">
+                <div class="indian-products">
+                    <div class="products-title">🌶️ India's Valuable Products</div>
+                    <div class="policy-item">
+                        <strong>Spices:</strong> <span class="highlight">Pepper, cinnamon, cardamom, cloves</span>
+                    </div>
+                    <div class="policy-item">
+                        <strong>Textiles & Raw Materials:</strong> <span class="highlight">Silk, cotton, jute, indigo</span>
+                    </div>
+                    <div class="policy-item">
+                        <strong>Other Goods:</strong> <span class="highlight">Saltpetre, fine fabrics, packaging material</span>
+                    </div>
+                </div>
+
+                <div class="key-points">
+                    <h4>🌡️ Climate Advantage</h4>
+                    <p>India's <span class="highlight">tropical climate</span> was favorable for the production of such goods, which Europe could not produce in its <span class="highlight">temperate climate</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('european-needs-section')">
+                🏔️ Why Europeans Needed These Products
+                <span class="toggle-btn" id="european-needs-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="european-needs-section">
+                <div class="key-points">
+                    <h4>❄️ Climate Limitations</h4>
+                    <p>Europe's <span class="highlight">cold and temperate climate</span> made such goods scarce or unavailable</p>
+                </div>
+
+                <div class="key-points">
+                    <h4>🍖 Vital Uses of Spices</h4>
+                    <div class="policy-item">
+                        <strong>Food Preservation:</strong> To preserve meat and other foods in the absence of refrigeration
+                    </div>
+                    <div class="policy-item">
+                        <strong>Flavor Enhancement:</strong> To enhance flavor in European cuisine
+                    </div>
+                </div>
+
+                <div class="key-points">
+                    <h4>👑 Luxury and Lifestyle</h4>
+                    <p>Textiles and luxury items suited the lifestyle, culture, and aristocratic tastes of European societies</p>
+                    <p>Thus, India's products became <span class="highlight">indispensable for European life and economy</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('exploration-timeline-section')">
+                📅 Key Exploration Discoveries Timeline
+                <span class="toggle-btn" id="exploration-timeline-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="exploration-timeline-section">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="event-name">🇵🇹 Bartolomeu Dias - Cape of Good Hope</div>
+                        <div class="event-date">1487</div>
+                        <div class="details">
+                            Portuguese explorer discovered the <span class="highlight">"Cape of Good Hope" (Utmasha Antaripa)</span>, opening the sea route to Asia
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="event-name">🇪🇸 Christopher Columbus - America</div>
+                        <div class="event-date">1492</div>
+                        <div class="details">
+                            Spanish citizen Columbus discovered <span class="highlight">America</span>, seeking a western route to Asia
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="event-name">🇵🇹 Vasco da Gama - India</div>
+                        <div class="event-date">1498</div>
+                        <div class="details">
+                            Portuguese citizen Vasco da Gama discovered <span class="highlight">India</span>, establishing the first direct sea link between Europe and India
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="event-name">🇳🇱 Tasman - Tasmania and New Zealand</div>
+                        <div class="event-date">1642-1644</div>
+                        <div class="details">
+                            Tasman of Holland (Dutch) discovered <span class="highlight">Tasmania (Van Dieman's Land)</span> and <span class="highlight">New Zealand</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="event-name">🇬🇧 James Cook - Australia</div>
+                        <div class="event-date">1769-1770</div>
+                        <div class="details">
+                            British sailor James Cook discovered <span class="highlight">Australia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('arrival-order-section')">
+                🚢 Order of Arrival of European Companies in India
+                <span class="toggle-btn" id="arrival-order-toggle">▼</span>
+            </div>
+            <div class="section-content collapsible active" id="arrival-order-section">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="event-name">🇵🇹 Portuguese</div>
+                        <div class="event-date">1498</div>
+                        <div class="details">
+                            First Europeans to arrive in India at <span class="highlight">Calicut, Kerala</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="event-name">🇳🇱 Dutch (Netherlands)</div>
+                        <div class="event-date">1602</div>
+                        <div class="details">
+                            Arrived in <span class="highlight">Masulipatam, Andhra Pradesh</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="event-name">🇬🇧 British (English)</div>
+                        <div class="event-date">1608</div>
+                        <div class="details">
+                            Established presence in <span class="highlight">Surat, Gujarat</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="event-name">🇩🇰 Danish (Denmark)</div>
+                        <div class="event-date">1616</div>
+                        <div class="details">
+                            Settled in <span class="highlight">Tranquebar, Tamil Nadu</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="event-name">🇫🇷 French</div>
+                        <div class="event-date">1664</div>
+                        <div class="details">
+                            Established colony in <span class="highlight">Pondicherry</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="event-name">🏴󠁧󠁢󠁥󠁮󠁧󠁿 British Dominance Established</div>
+                        <div class="event-date">1757</div>
+                        <div class="details">
+                            After the victory at the <span class="highlight">Battle of Plassey</span>, the Nawab of Bengal submitted his dominions to the British East India Company, and official British administration began
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            const toggle = document.getElementById(sectionId.replace('-section', '-toggle'));
+            
+            section.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+
+        // Auto-expand all sections by default
+        document.addEventListener('DOMContentLoaded', function() {
+            const allSections = document.querySelectorAll('.collapsible');
+            const allToggles = document.querySelectorAll('.toggle-btn');
+            
+            allSections.forEach(section => section.classList.add('active'));
+            allToggles.forEach(toggle => toggle.classList.add('active'));
+        });
+    </script>
+</body>
+</html>
