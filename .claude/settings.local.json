@@ -11,7 +11,15 @@
       "Bash(sudo apt:*)",
       "Bash(sudo apt install:*)",
       "Bash(find:*)",
-      "Bash(npm install)"
+      "Bash(npm install)",
+      "Bash(curl:*)",
+      "Bash(npm run dev:*)",
+      "Bash(rm:*)",
+      "Bash(npm cache clean:*)",
+      "Bash(npm ci:*)",
+      "Bash(ls:*)",
+      "Bash(node:*)",
+      "Bash(npm start)"
     ],
     "deny": []
   }
